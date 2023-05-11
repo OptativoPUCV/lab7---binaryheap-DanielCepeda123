@@ -64,8 +64,10 @@ void heap_pop(Heap* pq){
   pq->heapArray[0] = pq->heapArray[pq->size - 1];
   pq->heapArray[pq->size - 1] = aux;
   int posicion = 0;
+  pq->size--;
   
   while(1){
+    pq->size--;
     if(pq->heapArray[posicion].priority > pq->heapArray[2 * posicion + 1].priority) break;
     if(pq->heapArray[posicion].priority > pq->heapArray[2 * posicion + 2].priority) break;
     aux = pq->heapArray[0];
