@@ -60,13 +60,18 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
- /* heapElem aux = pq->heapArray[0];
+ heapElem aux = pq->heapArray[0];
   pq->heapArray[0] = pq->heapArray[pq->size - 1];
   pq->heapArray[pq->size - 1] = aux;
+  int posicion = 0;
   
-  while(){
-    
-  }*/
+  while(1){
+    if(pq->heapArray[posicion].priority > pq->heapArray[2*posicion + 1].priority) break;
+    aux = pq->heapArray[posicion];
+    pq->heapArray[posicion] = pq->heapArray[2 * posicion + 1];
+    pq->heapArray[2 * posicion + 1] = aux;
+    posicion = posicion * 2 + 1;
+  }
   
 }
 
