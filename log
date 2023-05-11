@@ -437,3 +437,14 @@ heap.c:43:7: error: unused variable ‘prioridadPadre’ [-Werror=unused-variabl
 cc1: all warnings being treated as errors
 Compilation failed
 0d4c17e
+Thu 11 May 2023 03:29:21 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:43:7: error: unused variable ‘prioridadPadre’ [-Werror=unused-variable]
+   43 |   int prioridadPadre = pq->heapArray[indicePadre].priority;
+      |       ^~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+80bcc2a
