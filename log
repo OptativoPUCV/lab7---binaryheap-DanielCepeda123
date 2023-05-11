@@ -143,3 +143,23 @@ heap.c:39:14: error: ‘heap’ is used uninitialized [-Werror=uninitialized]
 cc1: all warnings being treated as errors
 Compilation failed
 6f1fdde
+Thu 11 May 2023 02:18:52 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:39:7: error: array subscript ‘Heap {aka struct Heap}[0]’ is partly outside array bounds of ‘unsigned char[8]’ [-Werror=array-bounds]
+   39 |   heap->size = 0;
+      |       ^~
+heap.c:37:10: note: referencing an object of size 8 allocated by ‘malloc’
+   37 |   heap = malloc(sizeof(Heap*));
+      |          ^~~~~~~~~~~~~~~~~~~~~
+heap.c:40:7: error: array subscript ‘Heap {aka struct Heap}[0]’ is partly outside array bounds of ‘unsigned char[8]’ [-Werror=array-bounds]
+   40 |   heap->capac = 0;
+      |       ^~
+heap.c:37:10: note: referencing an object of size 8 allocated by ‘malloc’
+   37 |   heap = malloc(sizeof(Heap*));
+      |          ^~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0b8f404
