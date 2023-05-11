@@ -382,3 +382,19 @@ heap.c:40:7: error: unused variable ‘indicePadre’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 208d2fa
+Thu 11 May 2023 03:21:33 PM UTC: 
+ heap.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:43:17: error: ‘indiceElem’ undeclared (first use in this function); did you mean ‘indiceElemen’?
+   43 |   pq->heapArray[indiceElem] = elemento;
+      |                 ^~~~~~~~~~
+      |                 indiceElemen
+heap.c:43:17: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:40:7: error: unused variable ‘indiceElemen’ [-Werror=unused-variable]
+   40 |   int indiceElemen = pq->size - 1;
+      |       ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9744e4d
