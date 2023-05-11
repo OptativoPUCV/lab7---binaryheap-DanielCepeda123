@@ -72,6 +72,7 @@ void heap_pop(Heap* pq){
     pq->heapArray[2 * posicion + 1] = aux;
     posicion = posicion * 2 + 1;
   }
+  pq->size--;
   
 }
 
