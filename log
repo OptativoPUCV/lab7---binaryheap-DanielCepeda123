@@ -16,3 +16,19 @@ heap.c:38:32: error: expected expression before ‘=’ token
       |                                ^
 Compilation failed
 fb70e69
+Thu 11 May 2023 02:15:00 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:37:16: error: expected ‘;’ before ‘malloc’
+   37 |   heap = (heap) malloc(sizeof(heap));
+      |                ^~~~~~~
+      |                ;
+heap.c:38:51: error: ‘heapElemen’ undeclared (first use in this function); did you mean ‘heapElem’?
+   38 |   heap.heapArray = (heapElem*) malloc (3 * sizeof(heapElemen));
+      |                                                   ^~~~~~~~~~
+      |                                                   heapElem
+heap.c:38:51: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+3641352
