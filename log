@@ -601,3 +601,14 @@ Thu 11 May 2023 05:18:05 PM UTC:
  tests:  7|1
 total_score: 45/70
 49eeac3
+Thu 11 May 2023 05:18:57 PM UTC: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:66:7: error: unused variable ‘posicion’ [-Werror=unused-variable]
+   66 |   int posicion = 0;
+      |       ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+99afc9f
