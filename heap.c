@@ -33,6 +33,10 @@ void heap_push(Heap* pq, void* data, int priority){
     pq->heapArray = realloc(pq->heapArray, (2 * pq->capac) + 1);
   }
 
+  heapElem elemento;
+  elemento.data = data;
+  elemento.priority = priority;
+  
 }
 
 
