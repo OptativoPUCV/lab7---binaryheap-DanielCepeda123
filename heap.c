@@ -42,18 +42,19 @@ void heap_push(Heap* pq, void* data, int priority){
 
   pq->heapArray[indiceElem] = elemento;
 
-   while(pq->heapArray[indiceElem].priority > pq->heapArray[indicePadre].priority){
+ while(pq->heapArray[indiceElem].priority > pq->heapArray[indicePadre].priority)    {
     heapElem aux = pq->heapArray[indiceElem];
     pq->heapArray[indiceElem] = pq->heapArray[indicePadre];
     pq->heapArray[indicePadre] = aux;
     indiceElem = indicePadre;
-    indicePadre = (indiceElem) / 2;
+    indicePadre = ( (indiceElem) / 2 ) + 1;
   } 
   
 }
 
 
 void heap_pop(Heap* pq){
+  heapElem aux = pq->heapArray[0];
 
 }
 
