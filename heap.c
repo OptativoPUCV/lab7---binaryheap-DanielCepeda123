@@ -65,14 +65,14 @@ void heap_pop(Heap* pq){
   pq->heapArray[pq->size - 1] = aux;
   //int posicion = 0;
   
-  /*while(1){
-    if(pq->heapArray[posicion].priority > pq->heapArray[2*posicion + 1].priority) break;
-    aux = pq->heapArray[posicion];
-    pq->heapArray[posicion] = pq->heapArray[2 * posicion + 1];
-    pq->heapArray[2 * posicion + 1] = aux;
-    posicion = posicion * 2 + 1;
+  while(1){
+    if(pq->heapArray[0].priority > pq->heapArray[2*0 + 1].priority) break;
+    aux = pq->heapArray[0];
+    pq->heapArray[0] = pq->heapArray[2 *0 + 1];
+    pq->heapArray[2 * 0 + 1] = aux;
+    //posicion = posicion * 2 + 1;
   }
-  pq->size--;*/
+  pq->size--;
   
 }
 
