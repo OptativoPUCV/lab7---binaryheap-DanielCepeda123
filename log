@@ -398,3 +398,15 @@ heap.c:40:7: error: unused variable ‘indiceElemen’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 9744e4d
+Thu 11 May 2023 03:22:08 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:45:35: error: invalid operands to binary > (have ‘heapElem’ {aka ‘struct nodo’} and ‘heapElem’ {aka ‘struct nodo’})
+   45 |   while(pq->heapArray[indiceElem] > pq->heapArray[indicePadre]){
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      |                           |
+      |                      heapElem {aka struct nodo}  heapElem {aka struct nodo}
+Compilation failed
+fbfa70b

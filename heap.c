@@ -37,7 +37,7 @@ void heap_push(Heap* pq, void* data, int priority){
   elemento.data = data;
   elemento.priority = priority;
   pq->size++;
-  int indiceElemen = pq->size - 1;
+  int indiceElem = pq->size - 1;
   int indicePadre = (pq->size - 1) / 2;
 
   pq->heapArray[indiceElem] = elemento;
