@@ -371,3 +371,14 @@ Thu 11 May 2023 02:57:42 PM UTC:
  tests:  2|2
 total_score: 20/70
 50ebb83
+Thu 11 May 2023 03:13:34 PM UTC: 
+ heap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:40:7: error: unused variable ‘indicePadre’ [-Werror=unused-variable]
+   40 |   int indicePadre = (pq->size - 1) / 2;
+      |       ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+208d2fa
