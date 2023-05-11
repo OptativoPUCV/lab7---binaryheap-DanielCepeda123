@@ -302,3 +302,13 @@ heap.c:21:20: error: incompatible types when initializing type ‘void *’ usin
       |                    ^~
 Compilation failed
 664ed09
+Thu 11 May 2023 02:30:14 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_top’:
+heap.c:21:3: error: cannot convert to a pointer type
+   21 |   void* elemento = (void*) pq->heapArray[0];
+      |   ^~~~
+Compilation failed
+16065e5
