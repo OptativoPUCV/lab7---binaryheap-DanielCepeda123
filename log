@@ -243,3 +243,24 @@ heap.c:23:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 3b44bdc
+Thu 11 May 2023 02:26:16 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_top’:
+heap.c:21:3: error: unknown type name ‘nodo’; use ‘struct’ keyword to refer to the type
+   21 |   nodo data = pq->heapArray[0];
+      |   ^~~~
+      |   struct 
+heap.c:21:15: error: incompatible types when initializing type ‘int’ using type ‘heapElem’ {aka ‘struct nodo’}
+   21 |   nodo data = pq->heapArray[0];
+      |               ^~
+heap.c:22:14: error: invalid type argument of ‘->’ (have ‘int’)
+   22 |   return data->data;
+      |              ^~
+heap.c:23:1: error: control reaches end of non-void function [-Werror=return-type]
+   23 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+20e0857
