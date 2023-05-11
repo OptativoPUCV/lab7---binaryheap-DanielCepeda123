@@ -106,3 +106,29 @@ heap.c:40:7: error: ‘heap’ is a pointer; did you mean to use ‘->’?
       |       ->
 Compilation failed
 36c12af
+Thu 11 May 2023 02:17:51 PM UTC: 
+ heap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:38:7: error: array subscript ‘Heap {aka struct Heap}[0]’ is partly outside array bounds of ‘unsigned char[8]’ [-Werror=array-bounds]
+   38 |   heap->heapArray = (heapElem*) malloc (3 * sizeof(heapElem));
+      |       ^~
+heap.c:37:10: note: referencing an object of size 8 allocated by ‘malloc’
+   37 |   heap = malloc(sizeof(heap));
+      |          ^~~~~~~~~~~~~~~~~~~~
+heap.c:39:7: error: array subscript ‘Heap {aka struct Heap}[0]’ is partly outside array bounds of ‘unsigned char[8]’ [-Werror=array-bounds]
+   39 |   heap->size = 0;
+      |       ^~
+heap.c:37:10: note: referencing an object of size 8 allocated by ‘malloc’
+   37 |   heap = malloc(sizeof(heap));
+      |          ^~~~~~~~~~~~~~~~~~~~
+heap.c:40:7: error: array subscript ‘Heap {aka struct Heap}[0]’ is partly outside array bounds of ‘unsigned char[8]’ [-Werror=array-bounds]
+   40 |   heap->capac = 0;
+      |       ^~
+heap.c:37:10: note: referencing an object of size 8 allocated by ‘malloc’
+   37 |   heap = malloc(sizeof(heap));
+      |          ^~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8c419be
