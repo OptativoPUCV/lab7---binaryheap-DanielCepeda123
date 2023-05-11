@@ -32,3 +32,14 @@ heap.c:38:51: error: ‘heapElemen’ undeclared (first use in this function); d
 heap.c:38:51: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 3641352
+Thu 11 May 2023 02:15:11 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:37:16: error: expected ‘;’ before ‘malloc’
+   37 |   heap = (heap) malloc(sizeof(heap));
+      |                ^~~~~~~
+      |                ;
+Compilation failed
+1b5fd29
