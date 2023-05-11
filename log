@@ -163,3 +163,29 @@ heap.c:37:10: note: referencing an object of size 8 allocated by ‘malloc’
 cc1: all warnings being treated as errors
 Compilation failed
 0b8f404
+Thu 11 May 2023 02:19:20 PM UTC: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:38:7: error: array subscript ‘Heap {aka struct Heap}[0]’ is partly outside array bounds of ‘unsigned char[8]’ [-Werror=array-bounds]
+   38 |   heap->heapArray = (heapElem*) malloc (3 * sizeof(heapElem*));
+      |       ^~
+heap.c:37:18: note: referencing an object of size 8 allocated by ‘malloc’
+   37 |   heap = (Heap*) malloc(sizeof(Heap*));
+      |                  ^~~~~~~~~~~~~~~~~~~~~
+heap.c:39:7: error: array subscript ‘Heap {aka struct Heap}[0]’ is partly outside array bounds of ‘unsigned char[8]’ [-Werror=array-bounds]
+   39 |   heap->size = 0;
+      |       ^~
+heap.c:37:18: note: referencing an object of size 8 allocated by ‘malloc’
+   37 |   heap = (Heap*) malloc(sizeof(Heap*));
+      |                  ^~~~~~~~~~~~~~~~~~~~~
+heap.c:40:7: error: array subscript ‘Heap {aka struct Heap}[0]’ is partly outside array bounds of ‘unsigned char[8]’ [-Werror=array-bounds]
+   40 |   heap->capac = 0;
+      |       ^~
+heap.c:37:18: note: referencing an object of size 8 allocated by ‘malloc’
+   37 |   heap = (Heap*) malloc(sizeof(Heap*));
+      |                  ^~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2d24437
