@@ -60,13 +60,13 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
-  heapElem aux = pq->heapArray[0];
+ /* heapElem aux = pq->heapArray[0];
   pq->heapArray[0] = pq->heapArray[pq->size - 1];
   pq->heapArray[pq->size - 1] = aux;
   
   while(){
     
-  }
+  }*/
   
 }
 
