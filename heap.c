@@ -81,7 +81,7 @@ void heap_pop(Heap* pq){
       
     }
   }
-  pq->size--;
+  //pq->size--;
   
 }
 
