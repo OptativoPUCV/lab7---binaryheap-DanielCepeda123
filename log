@@ -189,3 +189,9 @@ heap.c:37:18: note: referencing an object of size 8 allocated by ‘malloc’
 cc1: all warnings being treated as errors
 Compilation failed
 2d24437
+Thu 11 May 2023 02:21:29 PM UTC: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  0|4
+total_score: 0/70
+6661384
