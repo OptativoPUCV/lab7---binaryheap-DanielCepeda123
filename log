@@ -410,3 +410,16 @@ heap.c:45:35: error: invalid operands to binary > (have ‘heapElem’ {aka ‘s
       |                      heapElem {aka struct nodo}  heapElem {aka struct nodo}
 Compilation failed
 fbfa70b
+Thu 11 May 2023 03:23:06 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:45:34: error: invalid type argument of ‘->’ (have ‘heapElem’ {aka ‘struct nodo’})
+   45 |   while(pq->heapArray[indiceElem]->priority > pq->heapArray[indicePadre]->priority){
+      |                                  ^~
+heap.c:45:73: error: invalid type argument of ‘->’ (have ‘heapElem’ {aka ‘struct nodo’})
+   45 |   while(pq->heapArray[indiceElem]->priority > pq->heapArray[indicePadre]->priority){
+      |                                                                         ^~
+Compilation failed
+25ec53c
