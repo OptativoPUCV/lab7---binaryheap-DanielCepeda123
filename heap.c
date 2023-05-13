@@ -73,7 +73,9 @@ void heap_pop(Heap* pq){
 
     if (pq->size > 2){
       if((pq->heapArray[posicion].priority >= pq->heapArray[2 * posicion + 1].priority) && (pq->heapArray[posicion].priority > pq->heapArray[2 * posicion + 2].priority) ) return;
-      }
+    }else{
+      if(pq->heapArray[posicion].priority >= pq->heapArray[2 * posicion + 1].priority) return;
+    }
 
   break;
   }
