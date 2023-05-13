@@ -101,7 +101,7 @@ void heap_pop(Heap* pq){
 
 
     
-  //break;
+  break;
   }
     //if(pq->heapArray[posicion].priority >= pq->heapArray[2 * posicion + 2].priority) break;
 
