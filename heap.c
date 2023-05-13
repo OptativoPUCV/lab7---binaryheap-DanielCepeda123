@@ -82,7 +82,7 @@ void heap_pop(Heap* pq){
       posicion = posicion * 2 + 2;
     }
   }
-  //pq->size--;
+  pq->size--;
   
 }
 
