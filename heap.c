@@ -96,13 +96,12 @@ void heap_pop(Heap* pq){
         aux = pq->heapArray[posicion];
         pq->heapArray[posicion] = pq->heapArray[2 * posicion + 1];
         pq->heapArray[2 * posicion + 1] = aux;
-        return;
       }
     }
 
 
     
-  //break;
+  break;
   }
     //if(pq->heapArray[posicion].priority >= pq->heapArray[2 * posicion + 2].priority) break;
 
