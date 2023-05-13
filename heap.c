@@ -68,15 +68,20 @@ void heap_pop(Heap* pq){
   pq->size--;
   
   while(1){
+    
     if(pq->size == 1) return;
 
     if (pq->size > 2){
-      if((pq->heapArray[posicion].priority >= pq->heapArray[2 * posicion + 1].priority) && (pq->heapArray[posicion].priority >= pq->heapArray[2 * posicion + 2].priority) ) return;
+      if(pq->heapArray[posicion].priority >= pq->heapArray[2 * posicion + 1].priority){
+        if(pq->heapArray[posicion].priority > pq->heapArray[2 * posicion + 2].priority){
+          return;
+        }
+      }
     }
-    
+    break;
     //if(pq->heapArray[posicion].priority >= pq->heapArray[2 * posicion + 2].priority) break;
 
-    if(pq->heapArray[2 * posicion + 1].priority > pq->heapArray[2 * posicion + 2].priority){
+    /*if(pq->heapArray[2 * posicion + 1].priority > pq->heapArray[2 * posicion + 2].priority){
       aux = pq->heapArray[posicion];
       pq->heapArray[posicion] = pq->heapArray[2 * posicion + 1];
       pq->heapArray[2 * posicion + 1] = aux;
@@ -86,7 +91,7 @@ void heap_pop(Heap* pq){
       pq->heapArray[posicion] = pq->heapArray[2 * posicion + 2];
       pq->heapArray[2 * posicion + 2] = aux;
       posicion = posicion * 2 + 2;
-    }
+    }*/
   }
   
 }
